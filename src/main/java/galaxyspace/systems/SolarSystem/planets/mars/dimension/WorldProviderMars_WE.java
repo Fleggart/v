@@ -35,7 +35,6 @@ import micdoodle8.mods.galacticraft.planets.mars.blocks.BlockBasicMars;
 import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
 import micdoodle8.mods.galacticraft.planets.mars.world.gen.BiomeDecoratorMars;
 import micdoodle8.mods.galacticraft.planets.mars.world.gen.BiomeProviderMars;
-import micdoodle8.mods.galacticraft.planets.mars.world.gen.MapGenCavernMars;
 import micdoodle8.mods.galacticraft.planets.mars.world.gen.MapGenDungeonMars;
 import micdoodle8.mods.galacticraft.planets.mars.world.gen.RoomBossMars;
 import micdoodle8.mods.galacticraft.planets.mars.world.gen.RoomTreasureMars;
@@ -248,9 +247,8 @@ public class WorldProviderMars_WE extends WE_WorldProviderSpace implements IProv
 		rg.lavaMaxY = 0;
 		//cp.createChunkGen_List.add(rg);
 		
-		MapGenCavernMars cavernGenerator = new MapGenCavernMars();
 		((WE_ChunkProviderSpace)cp).worldGenerators.clear();
-		((WE_ChunkProviderSpace)cp).worldGenerators.add(cavernGenerator);
+		
 		
 		cp.biomesList.clear();
 		
