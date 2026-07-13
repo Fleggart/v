@@ -15,7 +15,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.feature.WorldGenerator;
+// 删除 import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class Mars_High_Plains extends WE_Biome {
 	
@@ -50,5 +50,10 @@ public class Mars_High_Plains extends WE_Biome {
 		
 		// this.eggGenerator = new WorldGenEggs(MarsBlocks.rock);  // 已删除 - Slimeling 系统移除
 	}
-
+	
+	@Override
+	public void decorateBiome(World world, Random rand, int x, int z)
+	{
+		// 已删除 - 仅用于生成 Slimeling 蛋，Slimeling 系统已移除
+	}
 }
