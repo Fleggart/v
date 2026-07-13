@@ -47,8 +47,6 @@ public class Mars_Plains extends WE_Biome {
 		standardBiomeLayers.add(MarsBlocks.marsBlock.getStateFromMeta(5), MarsBlocks.marsBlock.getStateFromMeta(6), -256, 0,   -2, -1,  true);
 		standardBiomeLayers.add(Blocks.BEDROCK.getDefaultState(), 0, 2, 0, 0, true);
 		createChunkGen_InXZ_List.add(standardBiomeLayers);
-		
-		this.eggGenerator = new WorldGenEggs(MarsBlocks.rock);
 	}
 	
 	@Override
