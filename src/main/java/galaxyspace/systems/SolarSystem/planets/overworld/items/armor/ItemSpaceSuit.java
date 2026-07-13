@@ -20,9 +20,9 @@ import galaxyspace.systems.SolarSystem.planets.overworld.render.item.ItemSpaceSu
 import micdoodle8.mods.galacticraft.api.item.IArmorCorrosionResistant;
 import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
 import micdoodle8.mods.galacticraft.api.item.IItemElectric;
-import micdoodle8.mods.galacticraft.api.item.ISensorGlassesArmor;
+
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
-import micdoodle8.mods.galacticraft.core.client.gui.overlay.OverlaySensorGlasses;
+
 import micdoodle8.mods.galacticraft.core.energy.EnergyDisplayHelper;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
@@ -50,7 +50,8 @@ import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public abstract class ItemSpaceSuit extends ItemElectricArmor implements ISensorGlassesArmor, IModificationItem, IJetpackArmor, ISpecialArmor, IArmorGravity{
+public abstract class ItemSpaceSuit extends ItemElectricArmor 
+    implements IModificationItem, IJetpackArmor, ISpecialArmor, IArmorGravity{
 
 	public static String mod_count = "modification_count";
 	public static String[] suit_buttons = new String[] {"helmet_button", "chest_button", "legs_button", "boots_button"};
@@ -118,20 +119,7 @@ public abstract class ItemSpaceSuit extends ItemElectricArmor implements ISensor
 		else pressedKey[2] = false;
 
 	}
-	
-	@SideOnly(Side.CLIENT)
-	@Override
-    public void renderHelmetOverlay(ItemStack stack, EntityPlayer player, net.minecraft.client.gui.ScaledResolution resolution, float partialTicks) {
-		if (getArmorType(stack) == EntityEquipmentSlot.HEAD && stack.getTagCompound().getBoolean("sensor") && getElectricityStored(stack) > 2) {
-			
-			if(stack.getTagCompound().getBoolean(suit_buttons[0])) {
-				GlStateManager.pushMatrix();
-				OverlaySensorGlasses.renderSensorGlassesMain(stack, player, resolution, partialTicks);
-				OverlaySensorGlasses.renderSensorGlassesValueableBlocks(stack, player, resolution, partialTicks);
-				GlStateManager.popMatrix();
-			}
-		}
-	}
+
 	
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) 
