@@ -435,7 +435,7 @@ public class ItemBasicGS extends Item implements ISortableItem{
 		} else if(stack.getItemDamage() == BasicItems.COLONIST_KIT.getMeta()) {
 			if (player instanceof EntityPlayerMP) {
 				ItemStack[] stacks = new ItemStack[] {
-						new ItemStack(GCBlocks.oxygenDistributor, 1), new ItemStack(GCBlocks.oxygenCollector, 1), new ItemStack(GCBlocks.oxygenCompressor, 1),
+						new ItemStack(GCBlocks.oxygenCollector, 1), new ItemStack(GCBlocks.oxygenCompressor, 1),
 						new ItemStack(GCBlocks.solarPanel, 1, 4),  new ItemStack(GSItems.BASIC, 1, 20),  new ItemStack(GCBlocks.solarPanel, 1, 4),
 						new ItemStack(GCBlocks.machineTiered, 1, 0), new ItemStack(MarsBlocks.machine, 1, 0), new ItemStack(GCBlocks.machineBase2, 1, 8)
 				};
