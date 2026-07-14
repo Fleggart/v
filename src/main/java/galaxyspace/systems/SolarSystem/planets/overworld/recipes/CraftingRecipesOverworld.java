@@ -216,7 +216,7 @@ public class CraftingRecipesOverworld {
         RecipeUtil.addRecipe(BasicItems.WOLF_THERMAL_SUIT.getItemStack(), new Object[]{"X X", "XXX", "X X", 'X', new ItemStack(AsteroidsItems.basicItem, 1, 7)});
         RecipeUtil.addRecipe(BasicItems.ANIMAL_CAGE.getItemStack(), new Object[]{"XXX", "ZYX", "XXX", 'X', plateSteel, 'Z', new ItemStack(GCBlocks.grating, 1, 0), 'Y', new ItemStack(Blocks.CARPET, 1, OreDictionary.WILDCARD_VALUE)});
 
-        RecipeUtil.addCustomRecipe(new ShapedRecipeNBT(BasicItems.ADVANCED_EMERGENCY_KIT.getItemStack(), ItemBasicGS.getRecipe()));
+        
         
 
         RecipeUtil.addRecipe(new ItemStack(GSItems.ROCKET_MODULES, 1, 8), new Object[]{"XY ", "   ", "   ", 'X', BasicItems.BLANK_SCHEMATIC.getItemStack(), 'Y', new ItemStack(AsteroidsItems.tier3Rocket, 1, OreDictionary.WILDCARD_VALUE)});
