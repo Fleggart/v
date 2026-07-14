@@ -126,7 +126,7 @@ public class ChunkProviderKuiperBelt extends ChunkProviderBase
     private static HashSet<BlockVec3> chunksDone = new HashSet<BlockVec3>();
     private int largeAsteroidsLastChunkX;
     private int largeAsteroidsLastChunkZ;
-    private final MapGenAbandonedBase dungeonGenerator = new MapGenAbandonedBase();
+    
 
     public ChunkProviderKuiperBelt(World par1World, long par2, boolean par4)
     {
@@ -539,10 +539,7 @@ public class ChunkProviderKuiperBelt extends ChunkProviderBase
         this.generateTerrain(par1, par2, primer, false);
         //this.biomesForGeneration = this.world.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
 
-       /* if (this.world.provider instanceof WorldProviderAsteroids && ((WorldProviderAsteroids)this.world.provider).checkHasAsteroids())
-        {
-            this.dungeonGenerator.generate(this.world, par1, par2, primer);
-        }*/
+
 
 //        long time2 = System.nanoTime();
         final Chunk var4 = new Chunk(this.world, primer, par1, par2);
@@ -789,7 +786,7 @@ public class ChunkProviderKuiperBelt extends ChunkProviderBase
             }
         }
 
-        //this.dungeonGenerator.generateStructure(this.world, this.rand, new ChunkPos(chunkX, chunkZ));
+        
     }
 
     @Override
