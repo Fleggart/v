@@ -522,20 +522,10 @@ public class ItemBasicGS extends Item implements ISortableItem{
 		return (double) stack.getItemDamage() / (double) stack.getMaxDamage();
 	}
 
+	// 殖民者套件合成配方已禁用
+	// 右键点击 COLONIST_KIT 仍然可以正常获得物品
 	public static Object[] getColonistKitRecipe() {
-		ItemStack[] stacks = new ItemStack[] {
-				new ItemStack(GCBlocks.oxygenCollector, 1), new ItemStack(GCBlocks.oxygenCompressor, 1),
-				new ItemStack(GCBlocks.solarPanel, 1, 4), new ItemStack(GSItems.BASIC, 1, 20), new ItemStack(GCBlocks.solarPanel, 1, 4),
-				new ItemStack(GCBlocks.machineTiered, 1, 0), new ItemStack(MarsBlocks.machine, 1, 0), new ItemStack(GCBlocks.machineBase2, 1, 8)
-		};
-
-		Object[] result = new Object[]{ "ABCD", "EFGH", 'A', null, 'B', null, 'C', null, 'D', null, 'E', null, 'F', null, 'G', null, 'H', null };
-		for (int i = 0; i < stacks.length; i++)
-        {
-			result [i * 2 + 4] = stacks[i];
-        }
-
-		return result;
+		return null;
 	}
 
 	//EMERGENCY KIT
