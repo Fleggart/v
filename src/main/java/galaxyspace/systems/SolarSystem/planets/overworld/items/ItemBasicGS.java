@@ -561,7 +561,7 @@ public class ItemBasicGS extends Item implements ISortableItem{
         Object[] result = new Object[]{ "EAB", "CID", "FGH", 'A', null, 'B', null, 'C', null, 'D', null, 'E', null, 'F', null, 'G', null, 'H', null, 'I', null };
         for (int i = 0; i < SIZE; i++)
         {
-            result [i * 2 + 4] = getContents(i);
+            result [i * 2 + 2] = getContents(i);
         }        
         return result;
     }
