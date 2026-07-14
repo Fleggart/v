@@ -529,7 +529,7 @@ public class ItemBasicGS extends Item implements ISortableItem{
 				new ItemStack(GCBlocks.machineTiered, 1, 0), new ItemStack(MarsBlocks.machine, 1, 0), new ItemStack(GCBlocks.machineBase2, 1, 8)
 		};
 
-		Object[] result = new Object[]{ "ABC", "DEF", "GHI", 'A', null, 'B', null, 'C', null, 'D', null, 'E', null, 'F', null, 'G', null, 'H', null, 'I', null };
+		Object[] result = new Object[]{ "ABCD", "EFGH", 'A', null, 'B', null, 'C', null, 'D', null, 'E', null, 'F', null, 'G', null, 'H', null };
 		for (int i = 0; i < stacks.length; i++)
         {
 			result [i * 2 + 4] = stacks[i];
